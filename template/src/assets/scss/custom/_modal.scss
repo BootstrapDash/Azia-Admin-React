@@ -1,0 +1,231 @@
+/* ###### 4.7 Modal   ###### */
+
+// MODAL EFFECTS
+.modal {
+  &.animated .modal-dialog {
+    transform: translate(0,0);
+  }
+
+  &.effect-scale {
+    .modal-dialog {
+      transform: scale(0.7);
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    &.show .modal-dialog {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  &.effect-slide-in-right {
+    .modal-dialog {
+      transform: translateX(20%);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+    }
+
+    &.show .modal-dialog {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  &.effect-slide-in-bottom {
+    .modal-dialog {
+      transform: translateY(20%);
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    &.show .modal-dialog {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &.effect-newspaper {
+    .modal-dialog {
+      transform: scale(0) rotate(720deg);
+      opacity: 0;
+    }
+
+    &.show ~ .modal-backdrop,
+    .modal-dialog {
+      transition: all 0.5s;
+    }
+
+    &.show .modal-dialog {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+  }
+
+  &.effect-fall {
+    -webkit-perspective: 1300px;
+    -moz-perspective: 1300px;
+    perspective: 1300px;
+
+    .modal-dialog {
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      transform: translateZ(600px) rotateX(20deg);
+      opacity: 0;
+    }
+
+    &.show .modal-dialog {
+      transition: all 0.3s ease-in;
+      transform: translateZ(0px) rotateX(0deg);
+      opacity: 1;
+    }
+  }
+
+  &.effect-flip-horizontal {
+    perspective: 1300px;
+
+    .modal-dialog {
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      transform: rotateY(-70deg);
+      transition: all 0.3s;
+      opacity: 0;
+    }
+
+    &.show .modal-dialog {
+      transform: rotateY(0deg);
+      opacity: 1;
+    }
+  }
+
+  &.effect-flip-vertical {
+    perspective: 1300px;
+
+    .modal-dialog {
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      transform: rotateX(-70deg);
+      transition: all 0.3s;
+      opacity: 0;
+    }
+
+    &.show .modal-dialog {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+
+  &.effect-super-scaled {
+    .modal-dialog {
+      transform: scale(2);
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    &.show .modal-dialog {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  &.effect-sign {
+    perspective: 1300px;
+
+    .modal-dialog {
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      transform: rotateX(-60deg);
+      transform-origin: 50% 0;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    &.show .modal-dialog {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+
+  &.effect-rotate-bottom {
+    perspective: 1300px;
+
+    .modal-dialog {
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      transform: translateY(100%) rotateX(90deg);
+      transform-origin: 0 100%;
+      opacity: 0;
+      transition: all 0.3s ease-out;
+    }
+
+    &.show .modal-dialog {
+      transform: translateY(0%) rotateX(0deg);
+      opacity: 1;
+    }
+  }
+
+  &.effect-rotate-left {
+    perspective: 1300px;
+
+    .modal-dialog {
+      -moz-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      transform: translateZ(100px) translateX(-30%) rotateY(90deg);
+      transform-origin: 0 100%;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    &.show .modal-dialog {
+      transform: translateZ(0px) translateX(0%) rotateY(0deg);
+      opacity: 1;
+    }
+  }
+
+  &.effect-just-me {
+    .modal-dialog {
+      transform: scale(0.8);
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    .modal-content { background-color: transparent; }
+    .close {
+      text-shadow: none;
+      color: #fff;
+    }
+
+    .modal-header {
+      background-color: transparent;
+      border-bottom-color: rgba(#fff,.1);
+      padding-left: 0;
+      padding-right: 0;
+
+      h6 {
+        color: #fff;
+        font-weight: 500;
+      }
+    }
+
+    .modal-body {
+      color: rgba(#fff, .8);
+      padding-left: 0;
+      padding-right: 0;
+
+      h6 { color: #fff; }
+    }
+
+    .modal-footer {
+      background-color: transparent;
+      padding-left: 0;
+      padding-right: 0;
+      border-top-color: rgba(#fff, .1);
+    }
+
+    &.show ~ .modal-backdrop { opacity: .96; }
+    &.show .modal-dialog {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}

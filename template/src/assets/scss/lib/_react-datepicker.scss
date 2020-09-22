@@ -1,0 +1,13 @@
+.input-group {
+  // .input-group-prepend {
+     .react-datepicker-wrapper {
+      @extend .form-control;
+      padding-top: 0;
+      padding-left: 0;
+      .form-control {
+        border: 0;
+        height: 36px;
+      }
+    }
+  // }
+}

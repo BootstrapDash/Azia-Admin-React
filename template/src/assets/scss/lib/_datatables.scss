@@ -1,0 +1,18 @@
+/* ###### 5.1 Datatables ###### */
+
+.react-bootstrap-table {
+  .table {
+    tr {
+      td {
+        button {
+          padding: 0px 20px;
+          min-height: 24px;
+        }
+      }
+    }
+  }
+}
+.react-bootstrap-table-pagination-list {
+  display: flex;
+  justify-content: flex-end;
+}

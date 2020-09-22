@@ -1,0 +1,23 @@
+/* ###### 3.16 Progress ###### */
+
+.progress { height: auto; }
+
+.progress,
+.progress-bar {
+  border-radius: 0;
+}
+
+.progress-bar {
+  height: 10px;
+  font-size: 11px;
+}
+
+.progress-bar-xs  {
+  &, .progress-bar { height: 5px;  }
+}
+.progress-bar-sm { 
+  &, .progress-bar { height: 8px; }
+}
+.progress-bar-lg { 
+  &, .progress-bar { height: 15px; }
+}

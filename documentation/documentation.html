@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Documentation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/theme/dracula.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid documentation">
+      <div class="row">
+        <div class="col-md-3 col-xl-2 left-sidebar">
+          <div class="logo-wrapper">
+            <a href="#/" class="az-logo"><span></span> azia</a>
+          </div>
+          <h5 class="left-menu-title">Documentation</h5>
+          <ul class="left-menu">
+              <li><a href="#introduction"> Introduction </a></li>
+              <li><a href="#fileStructure"> File Structure </a></li>
+          </ul>
+          <h6 class="left-menu-title">Installation</h6>
+          <ul class="left-menu">
+              <li><a href="#setupEnvironment"> Setup Environment </a></li>
+              <li><a href="#templateInstallation"> Template Installation </a></li>
+          </ul>
+          <h6 class="left-menu-title">Deployment</h6>
+          <ul class="left-menu">
+              <li><a href="#deployment"> Deploy React App </a></li>
+          </ul>
+          <h6 class="left-menu-title">Basic Structure</h6>
+          <ul class="left-menu">
+              <li><a href="#appComponent"> App Component </a></li>
+              <li><a href="#header"> Header </a></li>
+              <li><a href="#footer"> Footer </a></li>
+          </ul>
+          <h6 class="left-menu-title">Other Information</h6>
+          <ul class="left-menu">
+              <li><a href="#customerSupport"> Customer Support </a></li>
+          </ul>
+        </div>
+        <div class="col-md-9 col-xl-10 main-panel bg-white">
+          <div class="main-panel-wrapper">
+              <h2 class="mt-2 text-center font-weight-light text-muted text-uppercase mb-4">Documentation</h2>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3 id="introduction" class="mb-4">Introduction</h3>
+                  <p>Azia React Admin is a responsive React template that is based on the CSS framework Bootstrap 4 and it is built with Sass. Sass compiler makes it easier to code and customize. If you are unfamiliar with Bootstrap or Sass, visit their
+                      website and read through the documentation. All of Bootstrap components have been modified to fit the style of Azia React Admin and provide a consistent look throughout the template.</p>
+                  <p>Before you start working with the template, we suggest you go through the pages that are bundled with the theme. Most of the template example pages contain quick tips on how to create or use a component which can
+                      be really helpful when you need to create something on the fly.</p>
+                  </div>
+              </div>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3 id="fileStructure" class="mb-4">File Structure</h3>
+                  <p>Once you have download the package you will see the following folder structure inside the folder.</p>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+Azia/
+  ├── template
+    ├── src/
+        ├── app/
+        ├── assets/
+            ├── images/
+            ├── styles/
+        ├── index.js
+    ├── public/
+    ├── .gitignore
+    ├── CHANGELOG.md
+    ├── package.json
+    ├── README.md
+  ├── CHANGELOG.md
+  ├── documentation
+
+                  </textarea>
+                </div>
+              </div>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3>Installation</h3>
+                  <h4 id="setupEnvironment" class="pt-4">Set up the Development Environment</h4>
+                  <p>Install <a href="https://nodejs.org/en/" target="_blank">Node.js and npm</a> if they are not already on your machine.</p>
+                  <h4 id="templateInstallation" class="pt-4">Template Installation</h4>
+                  <p>Go to the project directory and install the React local project dependencies.</p>
+                  <p>Run <code>npm install</code>. This command install the dependencies in the local <code>node_modules</code> folder.
+                      By default, <code>npm install</code> will install all modules listed as dependencies in <code>package.json</code>.</p>
+                  <textarea rows="4" cols="50" class="code-non-editable">npm install</textarea>   
+                  <textarea rows="4" cols="50" class="code-non-editable">npm start</textarea>                   
+                  <p>The <code>npm start</code> command launches the server, watches your files, and rebuilds the app as you make changes to those files.
+                   </p>
+                  <p>For more detailed information to install the React application, visit this official React <a href="https://reactjs.org/docs/getting-started.html" target="_blank">documentation website</a>.</p>
+                </div>
+              </div>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3 id="deployment">Deployment</h3>
+                  <h4 class="pt-4">Deploy React app </h4>
+                  <p>For the simplest deployment, create a production build and copy the output directory to a web server.</p>
+                  <p>1. Start with the production build:</p>
+                  <textarea rows="4" cols="50" class="code-non-editable">npm run-script build</textarea>   
+                  <p>2. Copy everything within the output folder (build/) to a folder on the server.</p>
+                </div>
+              </div>
+              <div class="card grid-margin">
+                <div class="card-body">
+                  <h3>Basic Structure</h3>
+                  <h4 class="pt-4" id="appComponent">index.js</h4>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+    
+      import React from 'react';
+      import ReactDOM from 'react-dom';
+      import { BrowserRouter } from 'react-router-dom';
+      import App from './app/App';
+      import * as serviceWorker from './serviceWorker';
+      
+      ReactDOM.render(
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      , document.getElementById('root'));
+      
+      serviceWorker.unregister();
+
+                  </textarea>
+                  <h4 class="pt-4" id="header">Header</h4>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+
+    import React, { Component } from "react";
+    import { Link, withRouter } from "react-router-dom";
+    import { Dropdown } from "react-bootstrap";
+    
+    export class Header extends Component {
+      closeMenu(e) {
+        e.target.closest(".dropdown").classList.remove("show");
+        e.target.closest(".dropdown .dropdown-menu").classList.remove("show");
+      }
+    
+      toggleHeaderMenu(e) {
+        e.preventDefault();
+        document.querySelector("body").classList.toggle("az-header-menu-show");
+      }
+    
+      componentDidUpdate(prevProps) {
+        if (this.props.location !== prevProps.location) {
+          document.querySelector("body").classList.remove("az-header-menu-show");
+        }
+      }
+    
+      render() {
+        return (
+          <div>
+            <div className="az-header">
+              <div className="container">
+                <div className="az-header-left">
+                  <a href="#/" className="az-logo">
+                    <span></span> azia
+                  </a>
+                  <a
+                    id="azMenuShow"
+                    onClick={event => this.toggleHeaderMenu(event)}
+                    className="az-header-menu-icon d-lg-none"
+                    href="#/"
+                  >
+                    <span></span>
+                  </a>
+                </div>
+                <div className="az-header-menu">
+                  <div className="az-header-menu-header">
+                    <Link to="/" className="az-logo">
+                      <span></span> azia
+                    </Link>
+                    <a
+                      href="#/"
+                      onClick={event => this.toggleHeaderMenu(event)}
+                      className="close"
+                    >
+                      &times;
+                    </a>
+                  </div>
+                  <ul className="nav">
+                    <li
+                      className={
+                        this.isPathActive("/dashboard")
+                          ? "nav-item active"
+                          : "nav-item"
+                      }
+                    >
+                      <Link to="/dashboard" className="nav-link">
+                        <i className="typcn typcn-chart-area-outline"></i> Dashboard
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Dropdown
+                        className={
+                          this.isPathActive("/general-pages")
+                            ? "nav-item active"
+                            : "nav-item"
+                        }
+                      >
+                        <Dropdown.Toggle as={"a"} className="nav-link with-sub">
+                          <i className="typcn typcn-document"></i> Pages
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu className="az-menu-sub">
+                          <Link
+                            to="/general-pages/signin"
+                            className={
+                              this.isPathActive("/general-pages/signin")
+                                ? "nav-link active"
+                                : "nav-link"
+                            }
+                          >
+                            Sign In
+                          </Link>
+                          <Link
+                            to="/general-pages/signup"
+                            className={
+                              this.isPathActive("/general-pages/signup")
+                                ? "nav-link active"
+                                : "nav-link"
+                            }
+                          >
+                            Sign Up
+                          </Link>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </li>
+                    <li className="nav-item">
+                      <Dropdown
+                        className={
+                          this.isPathActive("/ui-elements") ||
+                          this.isPathActive("/form") ||
+                          this.isPathActive("/charts") ||
+                          this.isPathActive("/tables")
+                            ? "nav-item active"
+                            : "nav-item"
+                        }
+                      >
+                        <Dropdown.Toggle as={"a"} className="nav-link with-sub">
+                          <i className="typcn typcn-book"></i> Components
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu className="az-menu-sub az-menu-sub-mega">
+                          <div className="container">
+                            <div>
+                              <nav className="nav">
+                                <span>UI Elements</span>
+                                <Link
+                                  to="/ui-elements/buttons"
+                                  className={
+                                    this.isPathActive("/ui-elements/buttons")
+                                      ? "nav-link active"
+                                      : "nav-link"
+                                  }
+                                >
+                                  Buttons
+                                </Link>
+                                <Link
+                                  to="/ui-elements/dropdowns"
+                                  className={
+                                    this.isPathActive("/ui-elements/dropdowns")
+                                      ? "nav-link active"
+                                      : "nav-link"
+                                  }
+                                >
+                                  Dropdown
+                                </Link>
+                                <Link
+                                  to="/ui-elements/icons"
+                                  className={
+                                    this.isPathActive("/ui-elements/icons")
+                                      ? "nav-link active"
+                                      : "nav-link"
+                                  }
+                                >
+                                  Icons
+                                </Link>
+                              </nav>
+                            </div>
+                            <div>
+                              <nav className="nav">
+                                <span>Forms</span>
+                                <Link
+                                  to="/form/form-elements"
+                                  className={
+                                    this.isPathActive("/form/form-elements")
+                                      ? "nav-link active"
+                                      : "nav-link"
+                                  }
+                                >
+                                  Form Elements
+                                </Link>
+                              </nav>
+                            </div>
+                            <div>
+                              <nav className="nav">
+                                <span>Charts</span>
+                                <Link
+                                  to="/charts/chartjs"
+                                  className={
+                                    this.isPathActive("/charts/chartjs")
+                                      ? "nav-link active"
+                                      : "nav-link"
+                                  }
+                                >
+                                  ChartJS
+                                </Link>
+                              </nav>
+                            </div>
+                            <div>
+                              <nav className="nav">
+                                <span>Tables</span>
+                                <Link
+                                  to="/tables/basic-table"
+                                  className={
+                                    this.isPathActive("/tables/basic-table")
+                                      ? "nav-link active"
+                                      : "nav-link"
+                                  }
+                                >
+                                  Basic Tables
+                                </Link>
+                              </nav>
+                            </div>
+                          </div>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </li>
+                  </ul>
+                </div>
+                <div className="az-header-right">
+                <a href="https://www.bootstrapdash.com/demo/azia-react-free/documentation/documentation.html" className="az-header-search-link">
+                    <i className="fas fa-file-alt"></i>
+                  </a>
+                  <a href="#/" className="az-header-search-link">
+                    <i className="fas fa-search"></i>
+                  </a>
+                  <div className="az-header-message">
+                    <Link to="#/">
+                      <i className="typcn typcn-messages"></i>
+                    </Link>
+                  </div>
+                  <Dropdown className="az-header-notification">
+                    <Dropdown.Toggle as={"a"} className="new">
+                      <i className="typcn typcn-bell"></i>
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                      <div className="az-dropdown-header mg-b-20 d-sm-none">
+                        <a
+                          href="#/"
+                          onClick={event => this.closeMenu(event)}
+                          className="az-header-arrow"
+                        >
+                          <i className="icon ion-md-arrow-back"></i>
+                        </a>
+                      </div>
+                      <h6 className="az-notification-title">Notifications</h6>
+                      <p className="az-notification-text">
+                        You have 2 unread notification
+                      </p>
+                      <div className="az-notification-list">
+                        <div className="media new">
+                          <div className="az-img-user">
+                            <img
+                              src={require("../../assets/images/img2.jpg")}
+                              alt=""
+                            ></img>
+                          </div>
+                          <div className="media-body">
+                            <p>
+                              Congratulate <strong>Socrates Itumay</strong> for work
+                              anniversaries
+                            </p>
+                            <span>Mar 15 12:32pm</span>
+                          </div>
+                        </div>
+                        <div className="media new">
+                          <div className="az-img-user online">
+                            <img
+                              src={require("../../assets/images/img3.jpg")}
+                              alt=""
+                            ></img>
+                          </div>
+                          <div className="media-body">
+                            <p>
+                              <strong>Joyce Chua</strong> just created a new blog
+                              post
+                            </p>
+                            <span>Mar 13 04:16am</span>
+                          </div>
+                        </div>
+                        <div className="media">
+                          <div className="az-img-user">
+                            <img
+                              src={require("../../assets/images/img4.jpg")}
+                              alt=""
+                            ></img>
+                          </div>
+                          <div className="media-body">
+                            <p>
+                              <strong>Althea Cabardo</strong> just created a new
+                              blog post
+                            </p>
+                            <span>Mar 13 02:56am</span>
+                          </div>
+                        </div>
+                        <div className="media">
+                          <div className="az-img-user">
+                            <img
+                              src={require("../../assets/images/img5.jpg")}
+                              alt=""
+                            ></img>
+                          </div>
+                          <div className="media-body">
+                            <p>
+                              <strong>Adrian Monino</strong> added new comment on
+                              your photo
+                            </p>
+                            <span>Mar 12 10:40pm</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="dropdown-footer">
+                        <a href="#/">View All Notifications</a>
+                      </div>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                  <Dropdown className="az-profile-menu">
+                    <Dropdown.Toggle as={"a"} className="az-img-user">
+                      <img
+                        src={require("../../assets/images/img1.jpg")}
+                        alt=""
+                      ></img>
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu>
+                      <div className="az-dropdown-header d-sm-none">
+                        <a
+                          href="#/"
+                          onClick={event => this.closeMenu(event)}
+                          className="az-header-arrow"
+                        >
+                          <i className="icon ion-md-arrow-back"></i>
+                        </a>
+                      </div>
+                      <div className="az-header-profile">
+                        <div className="az-img-user">
+                          <img
+                            src={require("../../assets/images/img1.jpg")}
+                            alt=""
+                          ></img>
+                        </div>
+                        <h6>Aziana Pechon</h6>
+                        <span>Premium Member</span>
+                      </div>
+    
+                      <a href="#/" className="dropdown-item">
+                        <i className="typcn typcn-user-outline"></i> My Profile
+                      </a>
+                      <a href="#/" className="dropdown-item">
+                        <i className="typcn typcn-edit"></i> Edit Profile
+                      </a>
+                      <a href="#/" className="dropdown-item">
+                        <i className="typcn typcn-time"></i> Activity Logs
+                      </a>
+                      <a href="#/" className="dropdown-item">
+                        <i className="typcn typcn-cog-outline"></i> Account Settings
+                      </a>
+                      <Link to="/general-pages/signin" className="dropdown-item">
+                        <i className="typcn typcn-power-outline"></i> Sign Out
+                      </Link>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    
+      isPathActive(path) {
+        return this.props.location.pathname.startsWith(path);
+      }
+    }
+    
+    export default withRouter(Header);
+                    
+                                        
+
+                  </textarea>
+                  <h4 class="pt-4" id="footer">Footer</h4>
+                  <textarea rows="4" cols="50" class="code-non-editable">
+    import React, { Component } from 'react'
+
+    export class Footer extends Component {
+      render() {
+        return (
+          <div>
+            <div className="az-footer ht-40">
+              <div className="container ht-100p pd-t-0-f">
+                <span>&copy; 2019 Azia Responsive Bootstrap 4 Dashboard Template</span>
+              </div>{/* container */}
+            </div>{/* az-footer */}
+          </div>
+        )
+      }
+    }
+    
+    export default Footer
+                    
+                    
+                  </textarea>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h3 id="customerSupport" class="mb-4">Customer Support</h3>
+                  <p>If you face any issue while building your dashboard with Azia React Admin, please contact us via <a href="https://bootstrapdash.freshdesk.com/support/tickets/new" target="_blank">Bootstrapdash support form</a> .</p>
+                  <p>We will respond to you as quickly as we can. Thank you.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.45.0/mode/python/python.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
