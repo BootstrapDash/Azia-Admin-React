@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/demo/azia-react-free/template/preview/precache-manifest.74326dcd013869980a059eaee469fc5e.js"
+  "/demo/azia-react-free/template/preview/precache-manifest.ed5ba87eca14c7322c7a320ac1946c21.js"
 );
 
 self.addEventListener('message', (event) => {
